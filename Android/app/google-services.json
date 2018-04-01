@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "369019820879",
+    "firebase_url": "https://android-traffic-35891.firebaseio.com",
+    "project_id": "android-traffic-35891",
+    "storage_bucket": "android-traffic-35891.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:369019820879:android:03388f4072ff1f2e",
+        "android_client_info": {
+          "package_name": "com.example.jaadugar.trafficv10"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "369019820879-fo7i2kqt4kgcdm2fjtk0hqmggpseqo1b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-gqk2_Hnm7GsJi39E1bIw6I-0mt2xYMU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

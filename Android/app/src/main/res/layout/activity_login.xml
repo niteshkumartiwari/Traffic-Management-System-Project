@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jaadugar.trafficv10.Login">
+
+    <TextView
+        android:id="@+id/login_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="145dp"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="35dp"
+        android:text="LOGIN"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/lemail_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/login_textview"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="64dp"
+        android:text="E-MAIL"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/lemail_editview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/lemail_textview"
+        android:layout_alignBottom="@+id/lemail_textview"
+        android:layout_alignLeft="@+id/login_textview"
+        android:layout_alignStart="@+id/login_textview"
+        android:ems="10"
+        android:hint="email"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:id="@+id/lpassword_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/lemail_editview"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="57dp"
+        android:text="PASSWORD"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/lpassword_edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/lpassword_textview"
+        android:layout_alignBottom="@+id/lpassword_textview"
+        android:layout_alignLeft="@+id/lemail_editview"
+        android:layout_alignStart="@+id/lemail_editview"
+        android:ems="10"
+        android:hint="passkey"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lpassword_edittext"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="81dp"
+        android:layout_toEndOf="@+id/lpassword_textview"
+        android:layout_toRightOf="@+id/lpassword_textview"
+        android:onClick="login"
+        android:text="LOGIN" />
+
+    <Button
+        android:id="@+id/lcreate_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_button"
+        android:layout_marginTop="36dp"
+        android:layout_toEndOf="@+id/lemail_textview"
+        android:layout_toRightOf="@+id/lemail_textview"
+        android:onClick="createAcc"
+        android:text="CREATE NEW ACCOUNT" />
+</RelativeLayout>

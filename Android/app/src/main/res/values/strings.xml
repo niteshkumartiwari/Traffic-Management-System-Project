@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Trafficv1.0</string>
+    <string-array name="Cities">
+        <item>AIT</item>
+        <item>Dighi</item>
+        <item>Vishrantwadi</item>
+        <item>Dhanori</item>
+        <item>Lohegaon</item>
+        <item>Airport</item>
+        <item>Yerwada</item>
+        <item>Hyatt Pune</item>
+        <item>PVR Koregaon</item>
+        <item>Vimaan Nagar</item>
+        <item>Rajiv Gandhi Nagar</item>
+        <item>Deccan College</item>
+        <item>Bund Garden</item>
+        <item>RTO Pune</item>
+        <item>Pune Station</item>
+    </string-array>
+    <string-array name="vType">
+        <item>2</item>
+        <item>4</item>
+        <item>8</item>
+    </string-array>
+</resources>

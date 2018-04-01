@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <TextView
+        android:id="@+id/register_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="131dp"
+        android:layout_marginStart="131dp"
+        android:layout_marginTop="28dp"
+        android:text="REGISTER"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/aadhar_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_edittext"
+        android:layout_marginTop="18dp"
+        android:layout_toLeftOf="@+id/password_edittext"
+        android:layout_toStartOf="@+id/password_edittext"
+        android:text="AADHAR NO."
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="202dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/aadhar_textview"
+        android:layout_alignBottom="@+id/aadhar_textview"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:hint="12 digits only"
+        android:inputType="text"
+        android:id="@+id/aadhar_edittext"/>
+
+    <TextView
+        android:id="@+id/dl_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/email_textview"
+        android:layout_alignRight="@+id/email_textview"
+        android:layout_below="@+id/aadhar_edittext"
+        android:layout_marginTop="23dp"
+        android:text="DL NO."
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/dl_edittext"
+        android:layout_width="202dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/dl_textview"
+        android:layout_alignBottom="@+id/dl_textview"
+        android:layout_alignLeft="@+id/aadhar_edittext"
+        android:layout_alignStart="@+id/aadhar_edittext"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/create_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="26dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_toEndOf="@+id/dl_textview"
+        android:layout_toRightOf="@+id/dl_textview"
+        android:text="CREATE ACCOUNT" />
+
+    <TextView
+        android:id="@+id/name_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/password_textview"
+        android:layout_alignStart="@+id/password_textview"
+        android:layout_below="@+id/register_textView"
+        android:layout_marginTop="51dp"
+        android:text="NAME"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/name_edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/name_textview"
+        android:layout_alignBottom="@+id/name_textview"
+        android:layout_alignLeft="@+id/register_textView"
+        android:layout_alignStart="@+id/register_textView"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/email_edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/name_edittext"
+        android:layout_alignStart="@+id/name_edittext"
+        android:layout_below="@+id/name_edittext"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:hint="abc@gmail.com"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:id="@+id/email_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/email_edittext"
+        android:layout_alignLeft="@+id/password_textview"
+        android:layout_alignStart="@+id/password_textview"
+        android:text="E-MAIL"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/password_edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/email_edittext"
+        android:layout_alignStart="@+id/email_edittext"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:hint="make it strong"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/password_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/aadhar_textview"
+        android:layout_alignStart="@+id/aadhar_textview"
+        android:layout_centerVertical="true"
+        android:text="PASSWORD"
+        android:textSize="20dp" />
+
+</RelativeLayout>

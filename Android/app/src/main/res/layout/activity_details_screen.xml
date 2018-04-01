@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <TextView
+        android:id="@+id/register_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="131dp"
+        android:layout_marginStart="131dp"
+        android:layout_marginTop="28dp"
+        android:text="DETAILS"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/source_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_textView"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="89dp"
+        android:layout_toLeftOf="@+id/create_button"
+        android:layout_toStartOf="@+id/create_button"
+        android:text="SOURCE"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/destination_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/source_textview"
+        android:layout_alignStart="@+id/source_textview"
+        android:layout_below="@+id/source_textview"
+        android:layout_marginTop="54dp"
+        android:text="DESTINATION"
+        android:textSize="20dp" />
+
+
+    <Button
+        android:id="@+id/create_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/register_textView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/register_textView"
+        android:layout_marginBottom="56dp"
+        android:onClick="Search"
+        android:text="SEARCH" />
+
+    <TextView
+        android:id="@+id/vehicle_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/destination_textview"
+        android:layout_alignStart="@+id/destination_textview"
+        android:layout_below="@+id/destination_textview"
+        android:layout_marginTop="49dp"
+        android:text="VEHICLE TYPE"
+        android:textSize="20dp" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/source_textview"
+        android:layout_alignLeft="@+id/spinner2"
+        android:layout_alignStart="@+id/spinner2"
+        android:dropDownWidth="150dp"
+        android:visibility="visible" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/vehicle_textview"
+        android:layout_alignLeft="@+id/spinner3"
+        android:layout_alignStart="@+id/spinner3"
+        android:dropDownWidth="150dp"
+        android:visibility="visible" />
+
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/vehicle_textview"
+        android:layout_toEndOf="@+id/create_button"
+        android:layout_toRightOf="@+id/create_button"
+        android:dropDownWidth="150dp"
+        android:visibility="visible" />
+
+</RelativeLayout>
+
