@@ -58,44 +58,24 @@ public class details_screen extends AppCompatActivity {
 
     public void Search(View view){
         Map<String,String> details= new HashMap<>();
-        Map<String,String> statusDetails= new HashMap<>();
         Map<String,String> resultDetails= new HashMap<>();
         Map<String,String> userDetails= new HashMap<>();
-        Map<String,String> simaphore=new HashMap<>();
+        Map<String,String> semaphore=new HashMap<>();
 
         details.put("source",source.getSelectedItem().toString());
         details.put("destination",destination.getSelectedItem().toString());
         details.put("vehicle",vehicle.getSelectedItem().toString());
 
-        statusDetails.put("complete","0");
         resultDetails.put("path","");
-        simaphore.put("simaphore","zero");
-
-
-
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String uid = user.getUid();
         String path= uid+"/details";
-        String status=uid+"/journeyStatus";
         //String result=uid+"/result";
         String userPath= "currentUser"+"/info";
         String flagPath= uid+"/flag";
 
         userDetails.put("ID",user.getUid().toString());
-
-        mDocRef = FirebaseFirestore.getInstance().document(flagPath);
-        mDocRef.set(simaphore).addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void aVoid) {
-                Log.d("Database","Details has been saved");
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Log.d("Database","Failed");
-            }
-        });
 
         mDocRef = FirebaseFirestore.getInstance().document(userPath);
         mDocRef.set(userDetails).addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -110,7 +90,6 @@ public class details_screen extends AppCompatActivity {
             }
         });
 
-
         mDocRef = FirebaseFirestore.getInstance().document(path);
         mDocRef.set(details).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
@@ -124,8 +103,9 @@ public class details_screen extends AppCompatActivity {
             }
         });
 
-        mDocRef = FirebaseFirestore.getInstance().document(status);
-        mDocRef.set(statusDetails).addOnSuccessListener(new OnSuccessListener<Void>() {
+        semaphore.put("semaphore","zero");
+        mDocRef = FirebaseFirestore.getInstance().document(flagPath);
+        mDocRef.set(semaphore).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
                 Log.d("Database","Details has been saved");

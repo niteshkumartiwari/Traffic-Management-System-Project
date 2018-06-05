@@ -82,25 +82,34 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 String uid = user.getUid();
                 String resultPath1= uid+"/flag";
 
-                do{
-                    mDocRef = FirebaseFirestore.getInstance().document(resultPath1);
-                    mDocRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-                        @Override
-                        public void onSuccess(DocumentSnapshot documentSnapshot) {
-                            if(documentSnapshot.exists()){
-                                resultNew= documentSnapshot.getString("simaphore");
-                            }
+                mDocRef = FirebaseFirestore.getInstance().document(resultPath1);
+                mDocRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+                        if(documentSnapshot.exists()){
+                            resultNew= documentSnapshot.getString("semaphore");
                         }
-                    })
-                            .addOnFailureListener(new OnFailureListener() {
-                                @Override
-                                public void onFailure(@NonNull Exception e) {
+                    }
+                })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
 
-                                }
-                            });
-                }while(resultNew=="zero");
+                            }
+                        });
 
                 //this method will be running on UI thread
+
+
+            }
+        };
+        mThread.start();
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                String uid = user.getUid();
                 String resultPath2= uid+"/result";
 
                 mDocRef = FirebaseFirestore.getInstance().document(resultPath2);
@@ -124,26 +133,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                             }
                         });
-
-                Map<String,String> simaphore=new HashMap<>();
-                simaphore.put("simaphore","one");
-                String flagPath= uid+"/flag";
-
-                mDocRef = FirebaseFirestore.getInstance().document(flagPath);
-                mDocRef.set(simaphore).addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-                        Log.d("Database","Details has been saved");
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.d("Database","Failed");
-                    }
-                });
             }
-        };
-        mThread.start();
+        }, 30000);
+
     }
 
 
@@ -261,7 +253,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
 
             mMap.addPolyline(options);
-
 
         }
         catch (NullPointerException e)
